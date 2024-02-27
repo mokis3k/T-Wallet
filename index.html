@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>T-Wallet</title>
 </head>
+
 <body>
-    <h1>Hello, <span id="name"></span></h1>
-    <p>Your balance is: <span id="balance"></span></p>
-    <script src="./script.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="header--logo--block">
+                <svg width="56px" height="56px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.5 9H14C12.3431 9 11 10.3431 11 12C11 13.6569 12.3431 15 14 15H21.5M14 12V12.01M4.61111 5H19.3889C20.5548 5 21.5 6.04467 21.5 7.33333V16.6667C21.5 17.9553 20.5548 19 19.3889 19H4.61111C3.44518 19 2.5 17.9553 2.5 16.6667V7.33333C2.5 6.04467 3.44518 5 4.61111 5Z"
+                        stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="header--logo">T-Wallet</div>
+            </div>
+            <div class="header--nav--block">
+                <nav>
+                    <a href="">Nav</a>
+                    <a href="">Nav</a>
+                    <a href="">Nav</a>
+                    <a href="">Nav</a>
+                    <a href="">Nav</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <wrapper class="wrapper--main">
+                <section class="section--currencyRate">
+                    <p class="section--title">Currency Rate</p>
+                    <wrapper class="wrapper--currencyRate">
+                        <ul>
+                            <li>Currency Ex.</li>
+                            <li>Currency Ex.</li>
+                            <li>Currency Ex.</li>
+                            <li>Currency Ex.</li>
+                            <li>Currency Ex.</li>
+                            <li>Currency Ex.</li>
+                            <li>Currency Ex.</li>
+                        </ul>
+                    </wrapper>
+                </section>
+                <section class="section--monobank">
+                    <p class="section--title">Section (Mono)</p>
+                    <wrapper class="wrapper--mono"></wrapper>
+                </section>
+                <section class="section--analytics">
+                    <p class="section--title">Analytics</p>
+                    <wrapper class="wrapper--analytics">
+                        <div class="analytics--block">Analytic Ex.</div>
+                        <div class="analytics--block">Analytic Ex.</div>
+                        <div class="analytics--block">Analytic Ex.</div>
+                    </wrapper>
+                </section>
+            </wrapper>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- <h1>Hello!</h1> -->
+    <!-- <p>Your Monobank balance is: <span id="balance"></span></p> -->
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>

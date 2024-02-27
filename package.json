@@ -1,0 +1,10 @@
+{
+  "name": "t-wallet",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mokis3k",
+  "license": "ISC"
+}

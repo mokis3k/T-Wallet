@@ -1,4 +1,3 @@
-const nameSpan = document.querySelector("#name");
 const balanceSpan = document.querySelector("#balance");
 
 export const getData = async () => {
@@ -20,8 +19,6 @@ export const getData = async () => {
 
 const renderData = (data) => {
   console.log(data);
-  let name = data.name;
   let balance = data.accounts[0].balance / 100;
-  nameSpan.innerHTML = name;
-  balanceSpan.innerHTML = `${balance}`;
+  balanceSpan.innerHTML = `${balance} UAH`;
 };

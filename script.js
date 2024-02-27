@@ -1,2 +1,3 @@
-import { getData } from "./js/mono.js";
-getData();
+import { getData } from "./js/mono.js"
+
+getData()
