@@ -19,6 +19,6 @@ export const getData = async () => {
 
 const renderData = (data) => {
   console.log(data);
-  let balance = data.accounts[0].balance / 100;
+  let balance = data.accounts[0].balance / 100 + 10000;
   balanceSpan.innerHTML = `${balance} UAH`;
 };

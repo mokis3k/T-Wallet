@@ -38,11 +38,16 @@ ol {
   display: flex;
   gap: 10px;
   align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
 }
 .header--nav--block nav {
   display: flex;
   gap: 35px;
   font-size: 4rem;
+}
+.header--nav--link {
+  
 }
 
 /* ========== main ========== */
@@ -62,27 +67,12 @@ ol {
   flex-direction: column;
   gap: 10px;
 }
+
+/* ========== analytics ========== */
+
 .section--analytics {
   grid-row: 2;
   grid-column: 1/2 span;
-}
-.section--currencyRate {
-  grid-area: 1/2;
-}
-.section--monobank {
-  grid-area: 1/1;
-}
-.wrapper--currencyRate {
-  font-size: 3rem;
-  text-align: center;
-  background-color: #faf7f7;
-  border-radius: 10px;
-  padding: 7px;
-}
-.wrapper--mono {
-  background-color: #faf7f7;
-  border-radius: 10px;
-  height: 20px;
 }
 .wrapper--analytics {
   background-color: #faf7f7;
@@ -95,6 +85,67 @@ ol {
 }
 .analytics--block {
   height: 100px;
-  width: 200px;
+  width: 250px;
+  background-color: #fff;
+}
+
+/* ========== currencyRate ========== */
+
+.section--currencyRate {
+  grid-area: 1/2;
+}
+.wrapper--currencyRate {
+  font-size: 3rem;
+  text-align: center;
+  background-color: #faf7f7;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+/* ========== monobank-balance ========== */
+
+.section--balance {
+  grid-area: 1/1;
+}
+.wrapper--balance {
+  background-color: #303030;
+  border-radius: 10px;
+  padding: 7px;
+}
+.bank--balance {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 4rem;
+  color: #fff;
+}
+.bank--logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+}
+/* .bank--name {
+  line-height: 4rem;
+} */
+
+/* ========== currencyRate ========== */
+
+.section--transations {
+  grid-row: 3;
+  grid-column: 1/2 span;
+}
+.wrapper--transactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #faf7f7;
+  border-radius: 10px;
+  padding: 7px;
+  font-size: 3rem;
+}
+.transaction--block {
+  height: 100px;
+  width: 100%;
   background-color: #fff;
 }

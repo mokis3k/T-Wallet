@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>T-Wallet</title>
 </head>
@@ -24,11 +26,10 @@
             </div>
             <div class="header--nav--block">
                 <nav>
-                    <a href="">Nav</a>
-                    <a href="">Nav</a>
-                    <a href="">Nav</a>
-                    <a href="">Nav</a>
-                    <a href="">Nav</a>
+                    <a class="header--nav--link" href="#">My accounts</a>
+                    <a class="header--nav--link" href="#">Settings</a>
+                    <a class="header--nav--link" href="">Sign Up</a>
+                    <a class="header--nav--link" href="#">Log in</a>
                 </nav>
             </div>
         </div>
@@ -50,9 +51,15 @@
                         </ul>
                     </wrapper>
                 </section>
-                <section class="section--monobank">
-                    <p class="section--title">Section (Mono)</p>
-                    <wrapper class="wrapper--mono"></wrapper>
+                <section class="section--balance">
+                    <p class="section--title">Balance</p>
+                    <wrapper class="wrapper--balance">
+                        <div class="bank--balance">
+                            <img class="bank--logo" src="./assets/icons/monobank-icon.jpeg" alt="monobank-icon">
+                            <div class="bank--name">Monobank:</div>
+                            <div class="bank--balance" id="balance"></div>
+                        </div>
+                    </wrapper>
                 </section>
                 <section class="section--analytics">
                     <p class="section--title">Analytics</p>
@@ -60,6 +67,13 @@
                         <div class="analytics--block">Analytic Ex.</div>
                         <div class="analytics--block">Analytic Ex.</div>
                         <div class="analytics--block">Analytic Ex.</div>
+                    </wrapper>
+                </section>
+                <section class="section--transations">
+                    <p class="section--title">Transactions</p>
+                    <wrapper class="wrapper--transactions">
+                        <div class="transaction--block">Transactions +</div>
+                        <div class="transaction--block">Transactions -</div>
                     </wrapper>
                 </section>
             </wrapper>
