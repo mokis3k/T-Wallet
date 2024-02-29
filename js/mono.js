@@ -1,24 +1,18 @@
-const balanceSpan = document.querySelector("#balance");
-
-export const getData = async () => {
+const getCurrencyRate = async () => {
   try {
-    let request = await fetch("https://api.monobank.ua/personal/client-info", {
-      method: `GET`,
-      headers: {
-        "Content-type": "application/json",
-        "X-Token": "ub8wfjfAMt-SrFDNbKmfxhCMpwxUK2xuKkM4tMS-Eq8E",
-      },
-    });
+    let request = await fetch("https://api.monobank.ua/bank/currency");
     if (!request.ok) throw new Error(request.status);
     let response = await request.json();
-    renderData(response);
+    localStorage.setItem("currencyRate", JSON.stringify(response));
   } catch (err) {
     console.log(err);
   }
 };
 
-const renderData = (data) => {
-  console.log(data);
-  let balance = data.accounts[0].balance / 100 + 10000;
-  balanceSpan.innerHTML = `${balance} UAH`;
+const currencyCodes = {
+  980: "UAH",
+  840: "DOLL",
+  978: "EUR"
 };
+
+export {getCurrencyRate, currencyCodes}
