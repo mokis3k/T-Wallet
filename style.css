@@ -47,14 +47,13 @@ ol {
   font-size: 4rem;
 }
 .header--nav--link {
-  
 }
 
 /* ========== main ========== */
 
 .wrapper--main {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
   gap: 25px;
   font-size: 5.5rem;
@@ -93,12 +92,21 @@ ol {
 
 .section--currencyRate {
   grid-area: 1/2;
+  width: fit-content;
 }
 .wrapper--currencyRate {
   font-size: 3rem;
   text-align: center;
   background-color: #faf7f7;
   border-radius: 10px;
+  padding: 7px;
+}
+.table--currencyRate {
+  border-collapse: collapse;
+}
+.table--currencyRate td,
+.table--currencyRate th {
+  border: 1px solid;
   padding: 7px;
 }
 
