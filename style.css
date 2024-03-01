@@ -22,8 +22,12 @@ ol {
   list-style-type: none;
 }
 .container {
-  /* max-width: 1080px; */
-  padding: 25px 45px;
+  padding: 45px 75px;
+}
+.container.main {
+  padding-top: 15px;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 /* ========== header ========== */
@@ -41,12 +45,27 @@ ol {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
 }
-.header--nav--block nav {
+.header--nav--block {
   display: flex;
   gap: 35px;
   font-size: 4rem;
+  padding-top: 5px;
 }
 .header--nav--link {
+  padding: 7px;
+  /* display: inline-block; */
+  cursor: pointer;
+}
+.header--nav--link:after {
+  display: block;
+  margin-top: 5px;
+  content: "";
+  border-bottom: 2px solid #0d0000;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.header--nav--link:hover:after {
+  transform: scaleX(1);
 }
 
 /* ========== main ========== */
@@ -99,15 +118,18 @@ ol {
   text-align: center;
   background-color: #faf7f7;
   border-radius: 10px;
-  padding: 7px;
+  padding: 10px;
 }
 .table--currencyRate {
   border-collapse: collapse;
 }
 .table--currencyRate td,
 .table--currencyRate th {
-  border: 1px solid;
+  /* border: 1px solid; */
   padding: 7px;
+}
+tbody td:not(td:last-child) {
+  border-right: 1px solid;
 }
 
 /* ========== monobank-balance ========== */

@@ -4,37 +4,19 @@ const currencyCodes = {
   840: "USD",
   978: "EUR",
 };
-
-const formCurrencyList = (codeA, rateBuy, rateSell, codeB) => {
-  return `${codeA} ${rateBuy.toFixed(2)} ${rateSell.toFixed(2)} ${codeB}`;
-};
-
-// const renderCurrencyRate = () => {
-//   currencyRate.map((ratePair) => {
-//     if (!ratePair["rateCross"]) {
-//       const tbody = document.createElement("tbody");
-//       const tr = document.createElement("tr");
-//       const td = document.createElement("td");
-
-//       const li = document.createElement("li");
-//       li.className = "currency--li";
-//       li.innerHTML = formCurrencyList(
-//         currencyCodes[ratePair["currencyCodeA"]],
-//         ratePair["rateBuy"],
-//         ratePair["rateSell"],
-//         currencyCodes[ratePair["currencyCodeB"]]
-//       );
-//       currencyRateTable.append(li);
-//     }
-//   });
-// };
+let currencyRate;
 
 const renderCurrencyRate = () => {
   const tbody = document.createElement("tbody");
   currencyRate.map((ratePair) => {
     if (!ratePair["rateCross"]) {
       const tr = document.createElement("tr");
-      Object.entries(ratePair).map((entryPair) => {
+      let ratePairArr = Object.entries(ratePair);
+      [ratePairArr[1], ratePairArr[ratePairArr.length - 1]] = [
+        ratePairArr[ratePairArr.length - 1],
+        ratePairArr[1],
+      ];
+      ratePairArr.map((entryPair) => {
         if (entryPair[0] !== "date") {
           const td = document.createElement("td");
           td.innerHTML =
@@ -56,13 +38,17 @@ const getCurrencyRate = async () => {
     if (!request.ok) throw new Error(request.status);
     let response = await request.json();
     localStorage.setItem("currencyRate", JSON.stringify(response));
+    currencyRate = JSON.stringify(response);
+    renderCurrencyRate();
   } catch (err) {
     console.log(err);
+    currencyRate = JSON.parse(localStorage.getItem("currencyRate"));
+    renderCurrencyRate();
   }
 };
 
-let currencyRate = localStorage.getItem("currencyRate")
-  ? JSON.parse(localStorage.getItem("currencyRate"))
-  : getCurrencyRate();
+// let currencyRate = localStorage.getItem("currencyRate")
+//   ? JSON.parse(localStorage.getItem("currencyRate"))
+//   : getCurrencyRate();
 
-export { renderCurrencyRate };
+export { getCurrencyRate };
