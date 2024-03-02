@@ -163,6 +163,7 @@ tbody td:not(td:last-child) {
 }
 .currencyRate--date {
   color: #a6a6a6;
+  font-weight: 300;
   font-size: 2rem;
   margin-top: 15px;
 }
@@ -195,7 +196,20 @@ tbody td:not(td:last-child) {
   gap: 20px;
 }
 .transaction--block {
-  height: 100px;
   width: 100%;
   background-color: #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  padding: 40px 15px;
+}
+.block--revenue {
+  /* background-color: #6aa667; */
+  background-color: #61855f;
+}
+.block--expense {
+  background-color: #ad5155;
 }
