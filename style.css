@@ -14,7 +14,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #0d0000;
+  color: #171616;
   background-color: #e3dfd5;
 }
 ul,
@@ -53,14 +53,13 @@ ol {
 }
 .header--nav--link {
   padding: 7px;
-  /* display: inline-block; */
   cursor: pointer;
 }
 .header--nav--link:after {
   display: block;
   margin-top: 5px;
   content: "";
-  border-bottom: 2px solid #0d0000;
+  border-bottom: 2px solid #171616;
   transform: scaleX(0);
   transition: transform 0.2s ease-in-out;
 }
@@ -75,15 +74,97 @@ ol {
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
   gap: 25px;
-  font-size: 5.5rem;
+  font-size: 4rem;
   background-color: #ebe8e1;
   border-radius: 20px;
   padding: 30px;
 }
-.wrapper--main section {
+/* .wrapper--main section {
   display: flex;
   flex-direction: column;
   gap: 10px;
+} */
+.section--data--block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wrapper--data--block {
+  display: flex;
+  background-color: #faf7f7;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 3rem;
+}
+
+/* ========== accounts-balance ========== */
+
+.section--balance {
+  grid-area: 1/1;
+}
+.wrapper--balance {
+  flex-direction: column;
+  font-size: 4rem;
+  gap: 15px;
+}
+.accounts--balance--total {
+  font-size: 5rem;
+  width: fit-content;
+  background-color: #ebe8e1;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 6rem;
+}
+.wrapper--balance--blocks {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+}
+.balance--block {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+}
+.balance--block--UAH {
+  background-color: #cfb672;
+}
+.balance--block--USD {
+  background-color: #61855f;
+}
+.balance--block--EUR {
+  background-color: #3567a1;
+}
+.currency--sign {
+  display: block;
+  font-size: 6.5rem;
+}
+
+/* ========== currencyRate ========== */
+
+.section--currencyRate {
+  grid-area: 1/2;
+}
+.wrapper--currencyRate {
+  text-align: center;
+  flex-direction: column;
+}
+.table--currencyRate {
+  border-collapse: collapse;
+}
+.table--currencyRate td,
+.table--currencyRate th {
+  padding: 7px;
+}
+tbody td:not(td:last-child) {
+  border-right: 1px solid;
+}
+.currencyRate--date {
+  color: #a6a6a6;
+  font-size: 2rem;
+  margin-top: 15px;
 }
 
 /* ========== analytics ========== */
@@ -93,70 +174,14 @@ ol {
   grid-column: 1/2 span;
 }
 .wrapper--analytics {
-  background-color: #faf7f7;
-  border-radius: 10px;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 7px;
-  font-size: 3rem;
 }
 .analytics--block {
   height: 100px;
   width: 250px;
   background-color: #fff;
 }
-
-/* ========== currencyRate ========== */
-
-.section--currencyRate {
-  grid-area: 1/2;
-  width: fit-content;
-}
-.wrapper--currencyRate {
-  font-size: 3rem;
-  text-align: center;
-  background-color: #faf7f7;
-  border-radius: 10px;
-  padding: 10px;
-}
-.table--currencyRate {
-  border-collapse: collapse;
-}
-.table--currencyRate td,
-.table--currencyRate th {
-  /* border: 1px solid; */
-  padding: 7px;
-}
-tbody td:not(td:last-child) {
-  border-right: 1px solid;
-}
-
-/* ========== monobank-balance ========== */
-
-.section--balance {
-  grid-area: 1/1;
-}
-.wrapper--balance {
-  background-color: #303030;
-  border-radius: 10px;
-  padding: 7px;
-}
-.bank--balance {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  font-size: 4rem;
-  color: #fff;
-}
-.bank--logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 7px;
-}
-/* .bank--name {
-  line-height: 4rem;
-} */
 
 /* ========== transations ========== */
 
@@ -165,14 +190,9 @@ tbody td:not(td:last-child) {
   grid-column: 1/2 span;
 }
 .wrapper--transactions {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  background-color: #faf7f7;
-  border-radius: 10px;
-  padding: 7px;
-  font-size: 3rem;
 }
 .transaction--block {
   height: 100px;

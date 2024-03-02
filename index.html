@@ -37,9 +37,9 @@
     <main>
         <div class="container main">
             <wrapper class="wrapper--main">
-                <section class="section--currencyRate">
+                <section class="section--data--block section--currencyRate">
                     <p class="section--title">Currency Rate</p>
-                    <wrapper class="wrapper--currencyRate">
+                    <wrapper class="wrapper--data--block wrapper--currencyRate">
                         <table class="table--currencyRate" id="currencyRate">
                             <thead>
                                 <th></th>
@@ -48,29 +48,41 @@
                                 <th></th>
                             </thead>
                         </table>
+                        <p class="currencyRate--date">Data provided at <span id="dateContainer"></span> by © Monobank
+                        </p>
                     </wrapper>
                 </section>
-                <section class="section--balance">
+                <section class="section--data--block section--balance">
                     <p class="section--title">Balance</p>
-                    <wrapper class="wrapper--balance">
-                        <div class="bank--balance">
-                            <img class="bank--logo" src="./assets/icons/monobank-icon.jpeg" alt="monobank-icon">
-                            <!-- <div class="bank--name">Monobank:</div>
-                                <div class="bank--balance" id="balance"></div> -->
+                    <wrapper class="wrapper--data--block wrapper--balance">
+                        <div class="accounts--balance--total">Total: <span>8127.34 ₴</span></div>
+                        <div class="wrapper--balance--blocks">
+                            <div class="balance--block balance--block--UAH">
+                                <span class="currency--sign">₴</span>
+                                <p>100.00</p>
+                            </div>
+                            <div class="balance--block balance--block--USD">
+                                <span class="currency--sign">$</span>
+                                <p>100.00</p>
+                            </div>
+                            <div class="balance--block balance--block--EUR">
+                                <span class="currency--sign">€</span>
+                                <p>100.00</p>
+                            </div>
                         </div>
                     </wrapper>
                 </section>
-                <section class="section--analytics">
+                <section class="section--data--block section--analytics">
                     <p class="section--title">Analytics</p>
-                    <wrapper class="wrapper--analytics">
+                    <wrapper class="wrapper--data--block wrapper--analytics">
                         <div class="analytics--block">Analytic Ex.</div>
                         <div class="analytics--block">Analytic Ex.</div>
                         <div class="analytics--block">Analytic Ex.</div>
                     </wrapper>
                 </section>
-                <section class="section--transations">
+                <section class="section--data--block section--transations">
                     <p class="section--title">Transactions</p>
-                    <wrapper class="wrapper--transactions">
+                    <wrapper class="wrapper--data--block wrapper--transactions">
                         <div class="transaction--block">Transactions +</div>
                         <div class="transaction--block">Transactions -</div>
                     </wrapper>
@@ -79,8 +91,6 @@
         </div>
     </main>
     <footer></footer>
-    <!-- <h1>Hello!</h1> -->
-    <!-- <p>Your Monobank balance is: <span id="balance"></span></p> -->
     <script type="module" src="script.js"></script>
 </body>
 
